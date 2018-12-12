@@ -4,13 +4,15 @@
 		<content>
 	      <ComboBox>
 	        <items>
-	           <core:Item text="{/countryCollection/0/name}"/>
+	           <!-- <core:Item text="{/countryCollection/0/name}"/> -->
+	           <core:Item id="iditem1"/>
 	           <core:Item text="{/countryCollection/1/name}"/>
 	           <core:Item text="{/countryCollection/2/name}"/>
 	        </items>
 	      </ComboBox>
 	      
-	       <ComboBox binding="{/countryCollection/}">
+	      <!--  <ComboBox binding="{/countryCollection/}"> -->
+	       <ComboBox id="idCombo2">
 	        <items>
 	           <core:Item text="{0/name}"/>
 	           <core:Item text="{1/name}"/>
@@ -18,10 +20,13 @@
 	        </items>
 	      </ComboBox>
 	      
-	      <ComboBox items="{/countryCollection}">
+	     <!--  <ComboBox items="{/countryCollection}">
 	        <items>
 	           <core:Item text="{name}"/>
 	        </items>
+	      </ComboBox> -->
+	      
+	       <ComboBox id="idCombo3">
 	      </ComboBox>
 	      
 		</content>

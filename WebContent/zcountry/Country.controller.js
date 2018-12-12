@@ -10,6 +10,19 @@ sap.ui.controller("zcountry.Country", {
         oModel.loadData("model/countryList.json");
         
         this.getView().setModel(oModel);
+        
+        // property binding
+        var oItem = this.getView().byId("iditem1");
+        oItem.bindProperty("text", "/countryCollection/0/name");
+        
+        // Element binding
+        var oCombo = this.getView().byId("idCombo2");
+        oCombo.bindElement("/countryCollection");
+        
+        //Aggregation binding
+        var oCombo2 = this.getView().byId("idCombo3");       
+        oCombo2.bindAggregation("items", "/countryCollection", new sap.ui.core.Item({ text : "{name}"}));
+        
 	},
 
 /**
